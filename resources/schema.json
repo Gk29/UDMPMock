@@ -1,0 +1,52 @@
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "tradeDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : {
+      "xpath": "/trade/tradeHeader/tradeDate"
+    }
+  }, {
+    "name" : "PartRef",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : {
+      "xpath":"/trade/tradeHeader/partyTradeIdentifier/partyReference"
+    }
+  }, {
+    "name" : "tradeId",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : {
+      "xpath":"/trade/tradeHeader/partyTradeIdentifier/tradeId"
+
+    }
+  }, {
+    "name" : "salary",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : {
+      "xpath":"/trade/governingLaw/department/role[@level='3A']/salary"
+    }
+  }, {
+    "name" : "roleField",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : {
+      "xpath":"/trade/governingLaw/department/role[@level='3B']/salary"
+    }
+  } ]
+}
